@@ -1,0 +1,47 @@
+.person-list {
+  max-width: 600px;
+  margin: 20px auto; 
+  padding: 0 20px;
+}
+
+mat-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  height: 100% !important;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; 
+  }
+
+.person-name, .person-address {
+    margin: 0;
+    white-space: nowrap; 
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+  }
+
+.mat-toolbar {
+  background-color: #77bc96;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.mat-icon-button {
+  color: #757575;
+  font-size: 24px;
+}
+
+.spacer {
+  flex: 1 1 auto; 
+}

@@ -1,0 +1,22 @@
+
+<h2 mat-dialog-title>{{ person.id ? 'Edit Person' : 'Add Person' }}</h2>
+
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()" class="person-form">
+
+    <mat-form-field class="full-width">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="address">
+  </mat-form-field>
+
+  <div class="form-actions">
+  <button mat-raised-button color="primary" type="submit">{{ person.id ? 'Update' : 'Create' }}</button>
+  <button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+</div>
+</form>
+
+

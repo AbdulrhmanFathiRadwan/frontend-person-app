@@ -1,0 +1,31 @@
+<div class="person-list">
+    <mat-toolbar>
+      <span>Person Management</span>
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary" (click)="addPerson()">Add Person</button>
+    </mat-toolbar>
+  
+    <mat-list *ngIf="persons.length > 0; else noData">
+      <mat-list-item *ngFor="let person of persons">
+        <div class="person-details">
+
+        <p matLine class="person-name">{{ person.name }}</p>
+        <p matLine class="person-address">{{ person.address }}</p>
+        </div>
+        
+        <div class="action-buttons">
+        <button mat-icon-button color="accent" (click)="editPerson(person)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deletePerson(person.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  
+    <ng-template #noData>
+      <p>No persons available.</p>
+    </ng-template>
+  </div>
+  
